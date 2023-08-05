@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+  /*--green: #1d9294;*/
+  /*--color: #3b718b;*/
+  --color: #f2f2f2ff;
+  --blue:#0070c0ff;
+}
+
+.dark {
+  --color:#083a53;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color);
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 60px;
+	height: 30px;
+	background: #bebebe;
+	display: block;
+	border-radius: 100px;
+  position: relative;
+}
+
+.toggle:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.1s;
+}
+
+input:checked + .toggle {
+	background: var(--color);
+}
+
+input:checked + .toggle:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.toggle:active:after {
+	width: 50px;
+}
+
+
+body{
+  /*background: linear-gradient(180deg, var(--green) 0%, rgb(12, 47, 56) 100%);*/
+  background: var(--color);
+}
+
+/*HEADER*/
+header {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 3px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 5px;
+ /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+}
+
+.logo {
+  color: #0070c0ff;
+  height: 50px;
+  font-size: 25px;
+  line-height: 60px;
+  padding-left:20px;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix{
+  clear: both;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  align-content: center;
+  display: flex;
+}
+
+nav ul li a{
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+nav ul li a.active, nav ul li a:hover {
+  background: var(--blue);
+  color:#fff;
+  transition: 0.5s;
+}
+/*HEADER*/
+.save-div {
+   align-self: center;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.save {
+  display: block;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.save:Hover, .save-all:hover {
+  background: var(--blue);
+}
+
+.save-all {
+  display: block;
+  cursor: pointer;
+  background: black;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  transition: 0.3s;
+  font-size: 18px;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: ce;
+}
+
+.save-all-div {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.show-button {
+  cursor: pointer;
+  background: black;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.show-button:hover {
+  background: var(--blue);
+}
+
+.show-button-div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+th {
+  background: black;
+  color: white;
+}
+
+/*MAIN*/
+main {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  min-height: 90vh;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
+  padding: 30px;
+}
+
+.tb-main {
+  max-width: 95%;
+  margin: 50px auto;
+}
+
+.transparent {
+  background: transparent;
+  border:none;
+  padding: 0;
+  box-shadow: none;
+  margin-top: 60px;
+  min-height: 90vh;
+}
+
+.marginTop {
+  margin-top:20px;
+}
+
+  /*students*/
+.students {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.students-element {
+  text-align: center;
+  background: #fff;
+  padding: 40px 0;
+  border-radius: 5px;
+  transition: 0.4s;
+  color: #595959ff;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.student-content {
+  width: 100%;
+  height: 100%;
+}
+
+.students-element:hover {
+  /* background-color: rgba(0, 0, 0, 0.15); */
+
+  /*color: #fff;
+  background: var(--blue);*/
+
+  background: #e7e6e6ff;
+}
+
+.weight400 {
+  font-weight: 400;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.underline-none {
+  text-decoration: none;
+}
+
+.link-black {
+  text-decoration: none;
+  color: #000;
+}
+
+.link-black:hover {
+  text-decoration: underline;
+}
+
+.underline {
+  color: var(--blue);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+  /*students*/
+
+.center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.marginzero {
+  margin: 0;
+}
+
+.lessonDetailHeader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.icon {
+  font-size: 17px;
+}
+
+.TwoButtons {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-bottom: 50px;
+}
+
+.OneButton {
+  text-align: center;
+}
+
+.margin50 {
+  margin-bottom:50px;
+}
+
+.black-dash {
+  background: rgb(92, 86, 86);
+  width: 1.5px;
+}
+
+.lessons-content {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-height: 70vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.homework-content {
+  margin-top: 20px;
+  max-height: 70vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.lesson {
+  padding: 5px 20px;
+}
+
+.earlier-lessons-div {
+  padding: 5px 20px;
+}
+
+.hw {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.fa-plus {
+  color: black;
+  padding-left: 2px;
+  /* margin-top: 10px; */
+}
+
+.fa-plus:hover {
+  color: var(--blue);
+}
+
+.half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.homework-title {
+  margin: 20px 0;
+}
+
+.second-half {
+  text-align: right;
+}
+
+.lesson-detail-content {
+  max-height: 80vh;
+  overflow: auto;
+  margin: 0 auto;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+
+.lesson-detail-content td {
+  padding: 30px;
+  border: 2px dashed black;
+  overflow: auto;
+}
+
+.lesson-detail-content tr {
+  border: 2px solid black;
+  overflow: auto;
+}
+
+.float-r {
+  float: right;
+}
+
+.float-l {
+  float: left;
+}
+
+.tabularOverviewContent {
+  padding: 0;
+}
+
+.tabular td {
+  border: 2px solid black;
+  max-height: 100px;
+}
+
+.tabular th {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg) scale(1.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+.rotate {
+  transform: rotate(0deg) scale(1.2);
+}
+
+.scale {
+  transform: scale(1.2);
+}
+
+.tb-date {
+  width: 40px;
+  padding: 15px 10px;
+  align-self: center;
+}
+
+.no-border {
+  border: 2px solid white !important;
+}
+
+.homework-table {
+  width: auto;
+}
+
+.table-table {
+  width: auto;
+
+}
+
+.whole-table {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 40px ;
+}
+
+.whole-table-all {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 1fr;
+}
+
+.whole-table-head {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr 40px ;
+  justify-items: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.name {
+  text-align: left;
+  color: #0070c0ff;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+/*MAIN*/
+
+/*FOOTER*/
+
+/*FOOTER*/
+
+/*FORM*/
+.form{
+  background: #fff;
+  padding: 40px;
+  min-width: 300px;
+  max-width: 800px;
+  border-radius: 5px;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform:translate(-50%, -40%);
+  color: #000;
+}
+
+.about {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.about h2 {
+  margin: 10px;
+}
+
+.input {
+  width: 100%;
+  margin: 10px 0 20px 0;
+  padding: 0 0 1px 2px;
+  font-size: 1rem;
+  border:none;
+  border-bottom: 0.1px solid #000;
+}
+
+.label {
+  margin: 10px 0;
+}
+
+.button {
+  border: none;
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+textarea {
+  line-height: 10px;
+}
+
+.button:hover {
+  background: var(--blue);
+}
+
+.link-delete, .link-update {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.fas {
+  /* font-size: 30px; */
+  font-size: 17px;
+}
+
+.fa-pen {
+  color: black;
+  opacity: 0.7;
+}
+
+.fa-pen:hover {
+  opacity: 1;
+}
+
+.fa-trash {
+  color: red;
+  opacity: 0.7;
+}
+
+.fa-trash:hover {
+  opacity: 1;
+}
+
+.middle {
+  text-align: center;
+}
+/*FORM*/
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/*MEDIA*/
+@media (max-width: 1200px) {
+  header{
+    margin: 20px;
+  }
+  main{
+    margin: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .students {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 865px) {
+
+  .menu-toggle{
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: var(--color);
+  }
+    .menu-toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+
+  .menu-toggle.active:before{
+    content: '\f00d';
+    font-family: fontAwesome;
+    font-size: 35px;
+  }
+
+  header nav ul li {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active{
+    display: block;
+    width:100%;
+  }
+
+  nav.active ul {
+    display: block;
+  }
+
+  nav.active ul li a{
+    margin: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .students {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .students {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .OneButton h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+  
+    padding-left: 0;
+  }
+
+  header, main {
+    margin: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  
+}
+/*MEDIA*/
+
