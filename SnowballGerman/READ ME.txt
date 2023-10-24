@@ -1,0 +1,20 @@
+Aplikace sloužící učitelům pro správu svých studentů a jejich hodin s nimy.
+- v aplikaci je soubor učitelů
+- každý učitel má možnost mít pod sebou své studenty, kterým píše na tabuli zápisky z hodiny + úkol. Na konci hodiny učitel uloží a studentovi se zpřístupní celá hodina
+
+
+Pro testování nejlěpší využít účet ADMIN z databáze
+---> email pro přihlášení: admin@admin.com
+---> heslo pro přihlášení: admin
+
+Nejlepší pro představu jak aplikace funguje je se podívat na studenta Penny Laughton, kterého najdete pod učitelem Hana Konopásková. (Má nejvěrohodnější ukázky hodin)
+
+NAV aplikace:
+Teachers - seznam učitelů
+Add Teacher - pro vytvoření nového učitele, pouze admin oprávnění
+All (TabularOverview) - přehled nově vytvořených hodin od všech učitelů (Stránka obrasuhe pouze výtah toho hlavního z hodin)
+My students - moji studenti, které pod sebou mám jako učitel
+Add Student - funkci jak pro učitele a admina (admin určuje učitele pro studenta)
+
+Jinak se dají hodiny mazat i upravovat.
+I v pohledu ALL se dají editovat hodiny a přidávat nové (pluskem v pravo nahoře)
